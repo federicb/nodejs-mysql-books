@@ -1,6 +1,6 @@
 module.exports = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: '0980',
-    DATABASE: 'books_express'
+    HOST: process.env.HOST,
+    USER: process.env.USER,
+    PASSWORD: process.env.PASSWORD,
+    DATABASE: process.env.DATABASE,
 }
