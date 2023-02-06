@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%- include('partials/head.ejs') %> 
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/books.css' />
   </head>
   <body>
-    <h1>books</h1>
+    <section>
+      <%- include('partials/navigation.ejs') %> 
+      <div id="main">
+        <% for( let i = 0; i < books.length; i++){ %>
+          <div id="tarjeta">
+            <h1><%= books[i].title %> </h1>
+            <img src="<%= books[i].image %> ">
+            <p>Author: <%= books[i].author %> <br> <%= books[i].description %></p>
+            <div id="btn">
+              <button>Delete</button>
+            </div>
+          </div>
+        <% } %> 
+      </div>
+    </section>
+    <%- include('partials/footer.ejs') %> 
   </body>
 </html>

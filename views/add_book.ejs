@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %> 
+    <title><%= title %> </title>
+</head>
+<body style="font-family: 'Rubik', sans-serif;">
+    <%- include('partials/navigation.ejs') %>
+    <div class="container col-md-7 mt-3 card">
+        <form action="/addbook" class="card-body" method="post">
+            <div class="from-group mb-3">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" placeholder="Entry a New Title" autofocus="autofocus">
+            </div>
+            <div class="from-group mb-3">
+                <label for="author">Author</label>
+                <input type="text" name="author" class="form-control" placeholder="Author" autofocus="autofocus">
+            </div>
+            <div class="from-group mb-3">
+                <label for="image">Image</label>
+                <input type="text" name="image" class="form-control" placeholder="http://website.com" autofocus="autofocus">
+            </div>
+            <div class="from-group mb-3">
+                <label for="description">Description</label>
+                <textarea name="description" class="form-control mb-3" rows="5"></textarea>
+            </div>
+            <input type="submit" class="btm btn-primary rounded border-0 p-2 text-white" style="background: #00a45b;" value="Post Entry">
+        </form>
+    </div>
+    
+    <%- include('partials/footer.ejs') %> 
+</body>
+</html>
