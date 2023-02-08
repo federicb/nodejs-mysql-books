@@ -15,7 +15,7 @@
             <img src="<%= books[i].image %> ">
             <p>Author: <%= books[i].author %> <br> <%= books[i].description %></p>
             <div id="btn">
-              <button>Delete</button>
+              <a onclick="confirmar('<%= books[i].id_book %>')" class="button">Eliminar</a>
             </div>
           </div>
         <% } %> 

@@ -11,6 +11,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: #1d211f;
 }
 section #main {
   display: flex;
@@ -41,11 +42,7 @@ section #main #tarjeta img {
 section #main #tarjeta p {
   font-size: 14px;
 }
-section #main #tarjeta #btn a {
+section #main #tarjeta button {
   padding: 0.4rem 1.5rem;
   background: #00a45b;
-  border: 1px solid black;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-}/*# sourceMappingURL=books.css.map */
+}/*# sourceMappingURL=dark_books.css.map */
