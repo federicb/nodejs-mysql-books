@@ -8,6 +8,12 @@
   <body>
     <section>
       <%- include('partials/navigation.ejs') %> 
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <a href="/darkcookie" class="button">Dark</a>
+      <a href="/lightcookie" class="button">Ligth</a>
       <div id="main">
         <% for( let i = 0; i < books.length; i++){ %>
           <div id="tarjeta">

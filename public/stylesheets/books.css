@@ -12,6 +12,14 @@ section {
   align-items: center;
   width: 100%;
 }
+section a {
+  padding: 0.4rem 1.5rem;
+  background: #00a45b;
+  border: 1px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
 section #main {
   display: flex;
   flex-wrap: wrap;

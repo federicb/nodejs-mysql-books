@@ -15,6 +15,17 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.get('/darkcookie', (req, res) => {
+  res.cookie('mode', 'dark')
+  console.log(req.cookies)
+  res.redirect('/')
+  })
+app.get('/lightcookie', (req, res) => {
+  res.cookie('mode', 'light')
+  console.log(req.cookies)
+  res.redirect('/')
+  })
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -39,5 +50,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
